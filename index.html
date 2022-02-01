@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+
+  <main>
+    <div class="profile">
+      <div class="profile-card">
+
+        <div class="profile-pic"><img src="images/image-jeremy.png" alt="picture of a boy"></div>
+
+        <div class="name">
+          <p class="profile-card-p">Report for</p>
+          <h3 class="profile-card-heading">Jeremy Robson</h3>
+        </div>
+
+      </div>
+
+      <div class="category">
+        <button class="category-item" id="daily">Daily</button>
+        <button class="category-item active" id="weekly">Weekly</button>
+        <button class="category-item" id="monthly">Monthly</button>
+      </div>
+    </div>
+
+
+
+    <div class="work">
+      <div class="card">
+        <header class="header">
+          <p>Work</p>
+          <div><svg viewbox="0 0 21 5" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF" fill-rule="evenodd" /></svg></div>
+        </header>
+
+        <div class="hour-container">
+          <p class="hours"></p>
+          <p class="last"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="play">
+      <div class="card">
+        <header class="header">
+          <p>Play</p>
+          <div><svg viewbox="0 0 21 5" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF" fill-rule="evenodd" /></svg></div>
+        </header>
+
+        <div class="hour-container">
+          <p class="hours"></p>
+          <p class="last"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="study">
+      <div class="card">
+        <header class="header">
+          <p>Study</p>
+          <div><svg viewbox="0 0 21 5" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF" fill-rule="evenodd" /></svg></div>
+        </header>
+        <div class="hour-container">
+          <p class="hours"></p>
+          <p class="last"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="exercise">
+      <div class="card">
+        <header class="header">
+          <p>Exercise</p>
+          <div><svg viewbox="0 0 21 5" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF" fill-rule="evenodd" /></svg></div>
+        </header>
+        <div class="hour-container">
+          <p class="hours"></p>
+          <p class="last"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="social">
+      <div class="card">
+        <header class="header">
+          <p>Social</p>
+          <div><svg viewbox="0 0 21 5" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF" fill-rule="evenodd" /></svg></div>
+        </header>
+        <div class="hour-container">
+          <p class="hours"></p>
+          <p class="last"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="self-care">
+      <div class="card">
+        <header class="header">
+          <p>Self Care</p>
+          <div><svg viewbox="0 0 21 5" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF" fill-rule="evenodd" /></svg></div>
+        </header>
+        <div class="hour-container">
+          <p class="hours"></p>
+          <p class="last"></p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>

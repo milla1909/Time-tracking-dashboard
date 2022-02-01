@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+}
+
+main {
+    display: grid;
+    gap: 1rem;
+    width: 45rem;
+    max-width: 120rem;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "profile work play study"
+        "profile exercise social self-care";
+    color: hsl(0, 0%, 100%, 0.8);
+}
+
+/* Big profile container */
+.profile {
+    grid-area: profile;
+    background-color: hsl(235, 46%, 20%);
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.profile-card,
+.category {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+}
+
+.profile-card {
+    background-color: hsl(246, 80%, 60%);
+    height: 70%;
+    border-radius: 5%;
+    gap: 1rem;
+    padding-top: 15%;
+
+}
+
+.profile-card h3 {
+    color: rgba(255, 255, 255, 0.959);
+}
+
+.category {
+    gap: 0.65rem;
+    height: 100%;
+    padding-top: 12%;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    width: fit-content;
+}
+
+.category-item {
+    font-size: 0.7rem;
+    cursor: pointer;
+    color: hsl(236, 100%, 87%, 0.8);
+}
+
+.category-item:hover,
+.category-item:focus {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+.profile-card img {
+    height: 3rem;
+    outline: 2px solid white;
+    border-radius: 50%;
+}
+
+.profile-card p {
+    color: hsl(236, 100%, 87%);
+    font-size: 0.7rem;
+}
+
+.profile-card-heading {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+
+
+/* Smaller containers */
+
+.card {
+    background-color: hsl(235, 46%, 20%);
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 12%;
+    padding-top: 8%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background-color: hsl(235, 40%, 35%);
+}
+
+.work,
+.play,
+.study,
+.social,
+.exercise,
+.self-care {
+    border-radius: 8%;
+    height: 10rem;
+    padding-top: 2rem;
+}
+
+.card .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: white;
+}
+
+.header div svg {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 0.8rem;
+}
+
+.hour-container .hours {
+    font-size: 2.1rem;
+    font-weight: 300;
+    color: hsl(0, 0%, 100%);
+    margin-left: 0.15rem;
+}
+
+.hour-container .last {
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+    color: hsl(236, 100%, 87%);
+}
+
+.work {
+    grid-area: work;
+    background-image: url(images/icon-work.svg);
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: -6%;
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+    grid-area: play;
+    background-image: url(images/icon-play.svg);
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: -3%;
+    background-color: hsl(195, 74%, 62%);
+}
+
+.study {
+    grid-area: study;
+    background-image: url(images/icon-study.svg);
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: -3%;
+    background-color: hsl(348, 100%, 68%);
+}
+
+.exercise {
+    grid-area: exercise;
+    background-image: url(images/icon-exercise.svg);
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: -1%;
+    background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+    grid-area: social;
+    background-image: url(images/icon-social.svg);
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: -3%;
+    background-color: hsl(264, 64%, 52%);
+}
+
+.self-care {
+    grid-area: self-care;
+    background-image: url(images/icon-self-care.svg);
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: -6%;
+    background-color: hsl(43, 84%, 65%);
+}
+
+
+
+
+
+/* Mobile design */
+
+@media (max-width:800px) {
+    body {
+        height: 100%;
+        padding: 4rem 1rem 2rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 20rem;
+        gap: 1.3rem;
+    }
+
+    button {
+        color: white;
+    }
+
+
+    /* profile container */
+    .profile {
+        height: 12rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-pic img {
+        height: 4rem;
+        margin-top: 10px;
+    }
+
+    .profile-card,
+    .category {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .profile-card {
+        padding: 10%;
+    }
+
+    .name {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .category {
+        justify-content: space-between;
+        padding: 6% 10%;
+    }
+
+    .profile-card-heading {
+        font-size: 1.3rem;
+    }
+
+    .category-item {
+        font-size: 0.7rem;
+        cursor: pointer;
+        color: hsl(236, 100%, 87%, 0.8);
+        transition: 0.3s;
+    }
+
+    .active {
+        color: white;
+    }
+
+    .category-item:hover,
+    .category-item:focus {
+        color: white;
+    }
+
+
+    /* Small containers */
+    .work,
+    .play,
+    .study,
+    .social,
+    .exercise,
+    .self-care {
+        border-radius: 15px;
+
+    }
+
+    .header p {
+        font-size: 1rem;
+        font-weight: 400;
+        color: white;
+    }
+
+    .header div svg {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 1.5rem;
+    }
+
+    .hour-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hour-container .hours {
+        margin-left: 0;
+    }
+
+    .card {
+        padding: 10%;
+    }
+}
